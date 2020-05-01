@@ -1,0 +1,22 @@
+<div class="mr-dialog">
+  <div class="dialog-header">
+    <h5 mat-dialog-title>
+      {{title}}
+    </h5>
+    <button class="dialog-close" (click)="onClose()">
+      <i class="feather icon-x"></i>
+    </button>
+  </div>
+
+  <div mat-dialog-content>
+    <p [innerHTML]="content | safeHtml"></p>
+  </div>
+
+  <div mat-dialog-actions *ngIf="type === dialogType.Confirm">
+    <button mat-flat-button color="primary" class="btn-right" (click)="onConfirm()">Ok</button>
+    <button mat-stroked-button class="btn-right" (click)="onDismiss()">Cancel</button>
+  </div>
+  <div mat-dialog-actions *ngIf="type !== dialogType.Confirm">
+    <button mat-stroked-button class="btn-right" (click)="onClose()">Close</button>
+  </div>
+</div>

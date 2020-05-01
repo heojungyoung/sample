@@ -1,0 +1,21 @@
+<div class="mr-dialog">
+  <div class="dialog-header">
+    <h5 mat-dialog-title>
+      {{title}}
+    </h5>
+    <button class="dialog-close" (click)="close()">
+      <i class="feather icon-x"></i>
+    </button>
+  </div>
+
+  <div mat-dialog-content>
+    <p [innerHTML]="message"></p>
+    <p>{{message}}</p>
+    <p>{{message}}</p>
+  </div>
+
+  <div mat-dialog-actions>
+    <button mat-flat-button color="primary" class="btn-right" (click)="onConfirm()">Ok</button>
+    <button mat-stroked-button class="btn-right" (click)="onDismiss()">Cancel</button>
+  </div>
+</div>

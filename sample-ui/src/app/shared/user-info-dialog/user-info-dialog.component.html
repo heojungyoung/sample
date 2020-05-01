@@ -1,0 +1,54 @@
+<div class="mr-dialog">
+  <div class="dialog-header">
+    <h5 mat-dialog-title>
+      User Information
+    </h5>
+    <button class="dialog-close" (click)="onClose()">
+      <i class="feather icon-x"></i>
+    </button>
+  </div>
+
+  <div mat-dialog-content>
+    <table class="table row-table" >
+      <colgroup>
+        <col width="30%" />
+        <col width="" />
+      </colgroup>
+      <tbody *ngIf="!noResult && isResult">
+        <tr>
+          <th>Name</th>
+          <td>{{userInfoData.familyName}}{{userInfoData.givenName}}</td>
+        </tr>
+        <tr>
+          <th>E-mail</th>
+          <td>{{userInfoData.email}}</td>
+        </tr>
+        <tr>
+          <th>GUID</th>
+          <td>{{userInfoData.guid}}</td>
+        </tr>
+        <tr>
+          <th>Department</th>
+          <td>{{userInfoData.department}}</td>
+        </tr>
+      </tbody>
+      <tbody *ngIf="noResult && isResult">
+        <tr>
+          <td colspan="2" class="no-result"> No Result </td>
+        </tr>
+      </tbody>
+      <tbody *ngIf="!isResult">
+        <tr>
+          <td colspan="2" class="is-result">
+            <mat-spinner diameter="40"></mat-spinner>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+
+  <div mat-dialog-actions>
+    <button mat-stroked-button class="btn-right" (click)="onClose()">Close</button>
+  </div>
+</div>

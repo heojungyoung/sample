@@ -22,5 +22,9 @@ public class sampleController {
 	   return new BaseResponse(sampleService.getSampleList(plcyId));
 	}
 	
+	@RequestMapping(path = "/index")
+    public String index() {
+        return "By Tanmay!";
+    }   
 	
 }

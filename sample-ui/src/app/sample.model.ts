@@ -11,3 +11,9 @@ export interface SampleModelList extends BaseListData{
     data: SampleModel[];
 }
 
+export interface hintModel {
+	typeKey: string;
+	typeVal: string;
+}
+
+

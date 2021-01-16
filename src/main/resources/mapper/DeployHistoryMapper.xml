@@ -14,19 +14,19 @@
    	<select id="selectSvcList" parameterType="String" resultType="com.sample.sample.model.svcModel">
 	    
 	    SELECT    
-	      VA_SVC_ID ,
-		  SPRT_YEAR ,
-		  VA_TYPE_CD ,
-		  VA_SVC_NM , 
-		  APP_PKG_ID , 
-		  REG_PGM_ID ,
-		  MDF_PGM_ID , 
-		  REGR_ID , 
-		  REG_DT ,
-		  MDFR_ID ,
-		  MDF_DT
+	      VA_SVC_ID as vaSvcId ,
+		  SPRT_YEAR as sprtYear,
+		  VA_TYPE_CD vaTypeCd ,
+		  VA_SVC_NM vaSvcNm ,
+		  APP_PKG_ID appPkgId , 
+		  REG_PGM_ID regPgmId ,
+		  MDF_PGM_ID mdfPgmId, 
+		  REGR_ID regrId, 
+		  REG_DT regDt ,
+		  MDFR_ID mdfrId ,
+		  MDF_DT mdfDt
 	    FROM TMVA_VA_SVC_M
-	    	WHERE SPRT_YEAR = #{mdlYear}
+	    
 	    
     </select>
    	

@@ -22,7 +22,7 @@
     </Appenders>
   <!--    실제 Logger-->
     <Loggers>
-        <Root level="DEBUG" additivity="false">
+        <Root level="INFO" additivity="false">
             <AppenderRef ref="Console_Appender"/>
             <AppenderRef ref="File_Appender"/>
         </Root>

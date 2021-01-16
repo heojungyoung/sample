@@ -12,8 +12,8 @@ export interface SampleModelList extends BaseListData{
 }
 
 export interface svcModel {
-	vaSvcId: string;
-	vaCntrId : string;
+	vaSvcId: number;
+	vaCntrId : number;
 	sprtYear: string;
 	vaTypeCd :string;
 	vaSvcNm : string;

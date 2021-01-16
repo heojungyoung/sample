@@ -8,38 +8,47 @@ import lombok.Setter;
 @Getter
 @Setter
 public class svcModel {
-
-	private int vaSvcId;
-	private int vaCntrId;
+	
+	private Integer vaSvcId;
+	// private Integer vaCntrId;
 	private String sprtYear;
 	private String vaTypeCd;
 	private	String vaSvcNm;
+	
+	private String appPkgId;
+	
 	private	String regPgmId;
 	private	String mdfPgmId;
 	private	String regrId;
 	private	Date regDt;
 	private	String mdfrId;
 	private	Date mdfDt;
-	private	String cntrCd;
+//	private	String cntrCd;
 	
+	public String getAppPkgId() {
+		return appPkgId;
+	}
+	public void setAppPkgId(String appPkgId) {
+		this.appPkgId = appPkgId;
+	}
 	public Date getRegDt() {
 		return regDt;
 	}
 	public Date getMdfDt() {
 		return mdfDt;
 	}
-	public int getVaSvcId() {
+	public Integer getVaSvcId() {
 		return vaSvcId;
 	}
-	public void setVaSvcId(int vaSvcId) {
+	public void setVaSvcId(Integer vaSvcId) {
 		this.vaSvcId = vaSvcId;
 	}
-	public int getVaCntrId() {
-		return vaCntrId;
-	}
-	public void setVaCntrId(int vaCntrId) {
-		this.vaCntrId = vaCntrId;
-	}
+//	public Integer getVaCntrId() {
+//		return vaCntrId;
+//	}
+//	public void setVaCntrId(Integer vaCntrId) {
+//		this.vaCntrId = vaCntrId;
+//	}
 	public void setRegDt(Date regDt) {
 		this.regDt = regDt;
 	}
@@ -90,12 +99,12 @@ public class svcModel {
 		this.mdfrId = mdfrId;
 	}
 
-	public String getCntrCd() {
-		return cntrCd;
-	}
-	public void setCntrCd(String cntrCd) {
-		this.cntrCd = cntrCd;
-	}
+//	public String getCntrCd() {
+//		return cntrCd;
+//	}
+//	public void setCntrCd(String cntrCd) {
+//		this.cntrCd = cntrCd;
+//	}
 	
 	
 	

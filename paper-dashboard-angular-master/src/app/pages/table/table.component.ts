@@ -28,10 +28,10 @@ export class TableComponent implements OnInit{
     public tableData2: TableData;
     
     ngOnInit(){
-        this.sampleHttpService.getSampleList(this.plcyId).subscribe( data => {		
-            this.SampleList = data.data;
-            console.log(this.SampleList);  
-        });
+        //this.sampleHttpService.getSampleList(this.plcyId).subscribe( data => {		
+         //   this.SampleList = data.data;
+         //   console.log(this.SampleList);  
+        //});
 
         this.sampleHttpService.getSvcList(this.mdlYear).subscribe( data => {		
             this.SvcList = data.data;

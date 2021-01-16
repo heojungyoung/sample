@@ -11,9 +11,21 @@ export interface SampleModelList extends BaseListData{
     data: SampleModel[];
 }
 
-export interface hintModel {
-	typeKey: string;
-	typeVal: string;
+export interface svcModel {
+	vaSvcId: string;
+	vaCntrId : string;
+	sprtYear: string;
+	vaTypeCd :string;
+	vaSvcNm : string;
+	regPgmId : string;
+	mdfPgmId : string;
+	regrId : string;
+	regDt :string;
+	mdfrId : string;
+	mdfDt : string;
+	cntrCd :string;
 }
 
-
+export interface svcModelList extends BaseListData{
+    data: svcModel[];
+}

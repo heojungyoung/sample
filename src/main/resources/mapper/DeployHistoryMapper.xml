@@ -11,4 +11,27 @@
 		FROM CITY
     </select>
    	
+   	<select id="selectSvcList" parameterType="String" resultType="com.sample.sample.model.svcModel">
+	    
+	    SELECT    
+	      VA_SVC_ID ,
+		  SPRT_YEAR ,
+		  VA_TYPE_CD ,
+		  VA_SVC_NM , 
+		  APP_PKG_ID , 
+		  REG_PGM_ID ,
+		  MDF_PGM_ID , 
+		  REGR_ID , 
+		  REG_DT ,
+		  MDFR_ID ,
+		  MDF_DT
+	    FROM TMVA_VA_SVC_M
+	    	WHERE SPRT_YEAR = #{mdlYear}
+	    
+    </select>
+   	
+   	
+   	
+   	
+   	
 </mapper>

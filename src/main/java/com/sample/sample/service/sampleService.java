@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.sample.sample.dao.sampleDao;
 import com.sample.sample.model.sampleModel;
+import com.sample.sample.model.svcModel;
 
 @Service
 public class sampleService {
@@ -18,5 +19,8 @@ public class sampleService {
 	     return sampleDao.selectSampleList(plcyId);
 	}
 	
+	public List<svcModel> getSvcList(String mdlYear) {
+		return sampleDao.selectSvcList(mdlYear);
+	}
 	
 }

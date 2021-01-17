@@ -11,4 +11,6 @@ import com.sample.sample.model.svcModel;
 public interface sampleDao {
 	List<sampleModel> selectSampleList(String plcyId);
 	List<svcModel> selectSvcList(String mdlYear);
+	svcModel selectCntr(svcModel svcModel);
+	void insertMdlCntr(svcModel svcModel);
 }

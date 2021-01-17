@@ -1,6 +1,9 @@
 package com.sample.sample.controller;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -29,15 +32,31 @@ public class sampleController {
 	public BaseResponse getSvcList(
 			@RequestParam(required = false) String mdlYear)  {
 		
-		List<svcModel> finalList = null;
+	
+		ArrayList<svcModel> updateMdlList = new ArrayList<svcModel>();
 		
-		// List<svcModel> list =  sampleService.getSvcList(mdlYear);
 		
-	//	for(svcModel svcMdl : list) {
-	//		finalList.add(svcMdl);
-	//	}
+	    List<svcModel> list =  sampleService.getSvcList(mdlYear);
 		
-	//	System.out.println(finalList);
+	 	for(svcModel svcMdl : list) {
+	 		svcModel cntrMdl;
+	 		cntrMdl = sampleService.getCntr(svcMdl);
+	 		if(cntrMdl != null) {
+	 			svcModel mdl = new svcModel();
+	 			mdl.setVaSvcId(cntrMdl.getVaSvcId());
+	 			mdl.setVaCntrId(cntrMdl.getVaCntrId());
+	 			updateMdlList.add(mdl);
+	 		}
+		}
+	 	
+	    System.out.println(updateMdlList);
+	    
+	    for(svcModel mdl : updateMdlList) {
+	    	sampleService.insertMdlCntr(mdl);
+	    }
+	    
+	    
+	    
 		return new BaseResponse(sampleService.getSvcList(mdlYear));
 	}
 	
@@ -48,3 +67,5 @@ public class sampleController {
     }   
 	
 }
+
+

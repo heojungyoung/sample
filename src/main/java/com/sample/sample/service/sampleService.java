@@ -23,4 +23,13 @@ public class sampleService {
 		return sampleDao.selectSvcList(mdlYear);
 	}
 	
+	public svcModel getCntr(svcModel svcModel) {
+		return sampleDao.selectCntr(svcModel);
+	}
+	
+	public void insertMdlCntr(svcModel svcModel) {
+		sampleDao.insertMdlCntr(svcModel);
+	}
+	
+	
 }

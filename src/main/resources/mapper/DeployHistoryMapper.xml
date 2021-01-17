@@ -30,7 +30,45 @@
 	    
     </select>
    	
+   	<select id="selectCntr" parameterType="com.sample.sample.model.svcModel" resultType="com.sample.sample.model.svcModel">
+		    SELECT    
+		      VA_CNTR_ID as vaCntrId,
+		      VA_SVC_ID vaSvcId ,
+		      CNTR_CD as cntrCd,
+		      DFLT_TZN_LANG_CD as dfltTznLangCd,
+		      REG_PGM_ID as regPgmId,
+		      MDF_PGM_ID as mdfPgmId,
+		      REGR_ID as regrId,
+		      REG_DT as regDt,
+		      MDFR_ID as mdfrId,
+		      MDF_DT as mdfDt
+		    FROM TMVA_VA_CNTR_L
+				WHERE VA_SVC_ID = #{vaSvcId}	    
+    </select>
    	
+   	
+   	<insert id="insertMdlCntr" parameterType="com.sample.sample.model.svcModel" >
+   	
+	   	INSERT INTO TMVA_VA_CNTR_MDL_L (
+	   		VA_CNTR_ID ,
+	   		MDL_ID ,
+	   		SVC_YN ,
+	   		REG_PGM_ID,
+	   		MDF_PGM_ID, 
+	   		REG_DT,
+	   		MDFR_ID, 
+	   		MDF_DT)
+	    VALUES ( #{vaCntrId} ,
+	    	    '2020_UDK',
+	    	    'Y',
+	    	    'admin',
+	    	    'admin',
+	    	    '2020-01-16 00:00:00',
+	    	    'admin',
+	    	    '2020-01-16 00:00:00'
+	    	   )
+   	
+   	</insert>
    	
    	
    	

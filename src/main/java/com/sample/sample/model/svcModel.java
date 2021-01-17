@@ -10,7 +10,7 @@ import lombok.Setter;
 public class svcModel {
 	
 	private Integer vaSvcId;
-	// private Integer vaCntrId;
+	private Integer vaCntrId;
 	private String sprtYear;
 	private String vaTypeCd;
 	private	String vaSvcNm;
@@ -23,8 +23,15 @@ public class svcModel {
 	private	Date regDt;
 	private	String mdfrId;
 	private	Date mdfDt;
-//	private	String cntrCd;
+	private	String cntrCd;
+	private String dfltTznLangCd;
 	
+	public String getDfltTznLangCd() {
+		return dfltTznLangCd;
+	}
+	public void setDfltTznLangCd(String dfltTznLangCd) {
+		this.dfltTznLangCd = dfltTznLangCd;
+	}
 	public String getAppPkgId() {
 		return appPkgId;
 	}
@@ -43,12 +50,12 @@ public class svcModel {
 	public void setVaSvcId(Integer vaSvcId) {
 		this.vaSvcId = vaSvcId;
 	}
-//	public Integer getVaCntrId() {
-//		return vaCntrId;
-//	}
-//	public void setVaCntrId(Integer vaCntrId) {
-//		this.vaCntrId = vaCntrId;
-//	}
+	public Integer getVaCntrId() {
+		return vaCntrId;
+	}
+	public void setVaCntrId(Integer vaCntrId) {
+		this.vaCntrId = vaCntrId;
+	}
 	public void setRegDt(Date regDt) {
 		this.regDt = regDt;
 	}
@@ -99,12 +106,12 @@ public class svcModel {
 		this.mdfrId = mdfrId;
 	}
 
-//	public String getCntrCd() {
-//		return cntrCd;
-//	}
-//	public void setCntrCd(String cntrCd) {
-//		this.cntrCd = cntrCd;
-//	}
+	public String getCntrCd() {
+		return cntrCd;
+	}
+	public void setCntrCd(String cntrCd) {
+		this.cntrCd = cntrCd;
+	}
 	
 	
 	

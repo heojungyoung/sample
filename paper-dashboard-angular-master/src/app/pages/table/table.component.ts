@@ -24,15 +24,15 @@ export class TableComponent implements OnInit{
     plcyId = '3';	
     mdlYear = '2020';
 
+    year : string;
+    serviceName : string;
+    appPackage : string;
+
     public tableData1: TableData;
     public tableData2: TableData;
     
     ngOnInit(){
-        //this.sampleHttpService.getSampleList(this.plcyId).subscribe( data => {		
-         //   this.SampleList = data.data;
-         //   console.log(this.SampleList);  
-        //});
-
+    
         this.sampleHttpService.getSvcList(this.mdlYear).subscribe( data => {		
             this.SvcList = data.data;
             console.log(this.SvcList);  
@@ -40,4 +40,24 @@ export class TableComponent implements OnInit{
         
 
     }
+
+
+    onSave() {
+	  
+        const saveData = {
+            year : this.year,
+            serviceName: this.serviceName,
+            appPackage : this.appPackage
+        }
+         
+        this.sampleHttpService.saveSvc(saveData).subscribe(response => {
+            if (response.stat === 'ok') {
+                alert('save');
+            }
+        });
+   }
+
+
+
+
 }

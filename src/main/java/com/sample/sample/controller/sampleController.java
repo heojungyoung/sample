@@ -5,8 +5,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -30,33 +34,7 @@ public class sampleController {
 	
 	@GetMapping("/getSvcList")
 	public BaseResponse getSvcList(
-			@RequestParam(required = false) String mdlYear)  {
-		
-	
-		ArrayList<svcModel> updateMdlList = new ArrayList<svcModel>();
-		
-		
-	    List<svcModel> list =  sampleService.getSvcList(mdlYear);
-		
-	 	for(svcModel svcMdl : list) {
-	 		svcModel cntrMdl;
-	 		cntrMdl = sampleService.getCntr(svcMdl);
-	 		if(cntrMdl != null) {
-	 			svcModel mdl = new svcModel();
-	 			mdl.setVaSvcId(cntrMdl.getVaSvcId());
-	 			mdl.setVaCntrId(cntrMdl.getVaCntrId());
-	 			updateMdlList.add(mdl);
-	 		}
-		}
-	 	
-	    System.out.println(updateMdlList);
-	    
-	    for(svcModel mdl : updateMdlList) {
-	    	sampleService.insertMdlCntr(mdl);
-	    }
-	    
-	    
-	    
+			@RequestParam(required = false) String mdlYear)  {    
 		return new BaseResponse(sampleService.getSvcList(mdlYear));
 	}
 	
@@ -65,6 +43,19 @@ public class sampleController {
     public String index() {
         return "By Tanmay!";
     }   
+	
+	
+	  @PostMapping("/saveSvc")
+	   public BaseResponse saveSvc(@RequestBody Map<String, Object> paramMap,
+	            HttpServletRequest request) {
+		    
+		    Map<String, Object> newData = (Map<String, Object>) paramMap.get("newData");
+	        //policyModel.setHintNm( (String) newHintData.get("hintNm"));
+	        //policyModel.setHintDesc( (String) newHintData.get("hintDesc"));
+		    sampleService.saveSvc(paramMap);
+	        return new BaseResponse();
+	    }
+	
 	
 }
 

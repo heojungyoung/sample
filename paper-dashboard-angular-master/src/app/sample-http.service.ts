@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { SampleModelList, svcModelList } from './sample.model';
+import { BaseResponse } from 'app/shared/shared.model';
 
 @Injectable({
   providedIn: 'root'
@@ -26,6 +27,11 @@ export class SampleHttpService {
     return this._httpClient.get<svcModelList>(requestUrl);
   }
 
-
+  saveSvc(newData: any): Observable<BaseResponse> {
+    const href = '/sample';
+    const requestUrl =
+          `${href}/saveSvc`;
+    return this._httpClient.post<BaseResponse>(requestUrl, newData);
+  }
 
 }

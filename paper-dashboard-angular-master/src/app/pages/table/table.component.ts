@@ -53,6 +53,7 @@ export class TableComponent implements OnInit{
         this.sampleHttpService.saveSvc(saveData).subscribe(response => {
             if (response.stat === 'ok') {
                 alert('save');
+                this.ngOnInit();
             }
         });
    }

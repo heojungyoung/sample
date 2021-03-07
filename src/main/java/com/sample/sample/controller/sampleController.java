@@ -45,16 +45,14 @@ public class sampleController {
     }   
 	
 	
-	  @PostMapping("/saveSvc")
-	   public BaseResponse saveSvc(@RequestBody Map<String, Object> paramMap,
+	@PostMapping("/saveSvc")
+	public BaseResponse saveSvc(@RequestBody Map<String, Object> paramMap,
 	            HttpServletRequest request) {
 		    
 		    Map<String, Object> newData = (Map<String, Object>) paramMap.get("newData");
-	        //policyModel.setHintNm( (String) newHintData.get("hintNm"));
-	        //policyModel.setHintDesc( (String) newHintData.get("hintDesc"));
 		    sampleService.saveSvc(paramMap);
 	        return new BaseResponse();
-	    }
+	 }
 	
 	
 }

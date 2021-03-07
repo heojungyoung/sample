@@ -47,29 +47,35 @@
     </select>
    	
    	
-   	<insert id="insertMdlCntr" parameterType="com.sample.sample.model.svcModel" >
+   	<insert id="insertSvc" parameterType="java.util.Map" >
    	
-	   	INSERT INTO TMVA_VA_CNTR_MDL_L (
-	   		VA_CNTR_ID ,
-	   		MDL_ID ,
-	   		SVC_YN ,
-	   		REG_PGM_ID,
-	   		MDF_PGM_ID, 
-	   		REG_DT,
-	   		MDFR_ID, 
-	   		MDF_DT)
-	    VALUES ( #{vaCntrId} ,
-	    	    '2020_UDK',
-	    	    'Y',
+	   	INSERT INTO TMVA_VA_SVC_M (
+	   		  VA_SVC_ID ,
+		      SPRT_YEAR ,
+		      VA_TYPE_CD ,
+		      VA_SVC_NM ,
+		  	  APP_PKG_ID , 
+		      REG_PGM_ID  ,
+		      MDF_PGM_ID , 
+		      REGR_ID , 
+		      REG_DT ,
+		      MDFR_ID  ,
+		      MDF_DT )
+	    VALUES ( 
+	             (SELECT MAX(VA_SVC_ID) + 1 FROM (SELECT VA_SVC_ID FROM TMVA_VA_SVC_M ) AS TEMP),
+	             #{year} ,
+	    	    'bixby',
+	    	     #{serviceName} ,
+	    	     #{appPackage} ,
 	    	    'admin',
 	    	    'admin',
-	    	    '2020-01-16 00:00:00',
 	    	    'admin',
-	    	    '2020-01-16 00:00:00'
+	    	     now(),
+	    	    'admin',
+	    	     now()
 	    	   )
    	
    	</insert>
-   	
-   	
+  
    	
 </mapper>

@@ -77,5 +77,27 @@
    	
    	</insert>
   
+  
+  
+  	<select id="selectBowlerList"  resultType="com.sample.sample.model.BowlerModel" >
+  	
+  		SELECT 
+  		   BowlerID AS bowlerID , 
+  		   BowlerLastName AS bowlerLastName ,
+  		   BowlerFirstName AS bowlerFirstName  ,
+  		   BowlerMiddleInit AS bowlerMiddleInit , 
+  		   BowlerAddress AS bowlerAddress ,
+  		   BowlerCity AS bowlerCity ,
+  		   BowlerState AS bowlerState ,
+  		   BowlerZip AS bowlerZip ,
+  		   BowlerPhoneNumber AS bowlerPhoneNumber ,
+  		   TeamID AS teamID 
+  		 FROM BOWLERS
+  	
+  	</select>
+  
+  
+  
+  
    	
 </mapper>

@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { SampleModelList, svcModelList } from './sample.model';
+import { bowlersList  } from './bowlers.model';
 import { BaseResponse } from 'app/shared/shared.model';
 
 @Injectable({
@@ -26,6 +27,14 @@ export class SampleHttpService {
           `${href}?mdlYear=${mdlYear}`;
     return this._httpClient.get<svcModelList>(requestUrl);
   }
+
+  getBowlerList(): Observable<bowlersList> {
+    const href = '/sample/getBowlerList';
+    const requestUrl =
+          `${href}`;
+    return this._httpClient.get<bowlersList>(requestUrl);
+  }
+  
 
   saveSvc(newData: any): Observable<BaseResponse> {
     const href = '/sample';

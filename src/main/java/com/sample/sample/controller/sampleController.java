@@ -1,8 +1,6 @@
 package com.sample.sample.controller;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
+
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
@@ -54,6 +52,10 @@ public class sampleController {
 	        return new BaseResponse();
 	 }
 	
+	@GetMapping("/getBowlerList")
+	public BaseResponse getBowler()  {    
+		return new BaseResponse(sampleService.getBowler());
+	}
 	
 }
 

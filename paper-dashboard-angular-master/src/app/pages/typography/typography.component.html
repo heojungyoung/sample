@@ -8,15 +8,15 @@
         <div class="table-responsive">
           <table class="table">
             <thead class=" text-primary">
-              <th>Year</th>
-              <th>serviceName</th>
-              <th>appPackage</th>
+              <th>bowleraddress</th>
+              <th>bowlerLastName</th>
+              <th>bowlerFirstName</th>
             </thead>
             <tbody>
-              <tr>
-                <td class="ag-c"></td>
-                <td class="ag-c"></td>
-                <td class="ag-c"></td>
+              <tr *ngFor="let row of bowlersList">
+                <td class="ag-c">{{row.bowlerAddress}}</td>
+                <td class="ag-c">{{row.bowlerLastName}}</td>
+                <td class="ag-c">{{row.bowlerFirstName}}</td>
               </tr>
             </tbody>
           </table>

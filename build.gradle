@@ -46,6 +46,8 @@ dependencies {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
 	testImplementation 'io.projectreactor:reactor-test'
+	testImplementation 'org.junit.platform:junit-platform-launcher'
+    testImplementation group: 'org.springframework', name: 'spring-test', version: '5.2.13.RELEASE'
 }
 
 

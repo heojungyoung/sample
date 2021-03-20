@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sample.sample.dao.sampleDao">
+               
+	<select id="selectSampleList" parameterType="String" resultType="com.sample.sample.model.sampleModel">
+	    SELECT 
+			ID
+		    ,NAME
+		    ,CNTRCODE
+			,POPULATION
+		FROM CITY
+    </select>
+   	
+   	<select id="selectSvcList" parameterType="String" resultType="com.sample.sample.model.svcModel">
+	    
+	    SELECT    
+	      VA_SVC_ID as vaSvcId ,
+		  SPRT_YEAR as sprtYear,
+		  VA_TYPE_CD vaTypeCd ,
+		  VA_SVC_NM vaSvcNm ,
+		  APP_PKG_ID appPkgId , 
+		  REG_PGM_ID regPgmId ,
+		  MDF_PGM_ID mdfPgmId, 
+		  REGR_ID regrId, 
+		  REG_DT regDt ,
+		  MDFR_ID mdfrId ,
+		  MDF_DT mdfDt
+	    FROM TMVA_VA_SVC_M
+	    
+	    
+    </select>
+   	
+   	<select id="selectCntr" parameterType="com.sample.sample.model.svcModel" resultType="com.sample.sample.model.svcModel">
+		    SELECT    
+		      VA_CNTR_ID as vaCntrId,
+		      VA_SVC_ID vaSvcId ,
+		      CNTR_CD as cntrCd,
+		      DFLT_TZN_LANG_CD as dfltTznLangCd,
+		      REG_PGM_ID as regPgmId,
+		      MDF_PGM_ID as mdfPgmId,
+		      REGR_ID as regrId,
+		      REG_DT as regDt,
+		      MDFR_ID as mdfrId,
+		      MDF_DT as mdfDt
+		    FROM TMVA_VA_CNTR_L
+				WHERE VA_SVC_ID = #{vaSvcId}	    
+    </select>
+   	
+   	
+   	<insert id="insertSvc" parameterType="java.util.Map" >
+   	
+	   	INSERT INTO TMVA_VA_SVC_M (
+	   		  VA_SVC_ID ,
+		      SPRT_YEAR ,
+		      VA_TYPE_CD ,
+		      VA_SVC_NM ,
+		  	  APP_PKG_ID , 
+		      REG_PGM_ID  ,
+		      MDF_PGM_ID , 
+		      REGR_ID , 
+		      REG_DT ,
+		      MDFR_ID  ,
+		      MDF_DT )
+	    VALUES ( 
+	             (SELECT MAX(VA_SVC_ID) + 1 FROM (SELECT VA_SVC_ID FROM TMVA_VA_SVC_M ) AS TEMP),
+	             #{year} ,
+	    	    'bixby',
+	    	     #{serviceName} ,
+	    	     #{appPackage} ,
+	    	    'admin',
+	    	    'admin',
+	    	    'admin',
+	    	     now(),
+	    	    'admin',
+	    	     now()
+	    	   )
+   	
+   	</insert>
+  
+  
+  
+  	<select id="selectBowlerList"  resultType="com.sample.sample.model.BowlerModel" >
+  	
+  		SELECT 
+  		   BowlerID AS bowlerID , 
+  		   BowlerLastName AS bowlerLastName ,
+  		   BowlerFirstName AS bowlerFirstName  ,
+  		   BowlerMiddleInit AS bowlerMiddleInit , 
+  		   BowlerAddress AS bowlerAddress ,
+  		   BowlerCity AS bowlerCity ,
+  		   BowlerState AS bowlerState ,
+  		   BowlerZip AS bowlerZip ,
+  		   BowlerPhoneNumber AS bowlerPhoneNumber ,
+  		   TeamID AS teamID 
+  		 FROM BOWLERS
+  	
+  	</select>
+  
+  
+  
+  
+   	
+</mapper>

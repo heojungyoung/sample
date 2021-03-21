@@ -79,7 +79,7 @@
   
   
   
-  	<select id="selectBowlerList"  resultType="com.sample.sample.model.BowlerModel" >
+  	<select id="selectBowlerList"  resultType="com.sample.sample.model.bowlerModel" >
   	
   		SELECT 
   		   BowlerID AS bowlerID , 

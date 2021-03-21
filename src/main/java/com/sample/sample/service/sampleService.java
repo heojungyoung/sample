@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.sample.sample.dao.sampleDao;
-import com.sample.sample.model.BowlerModel;
+import com.sample.sample.model.bowlerModel;
 import com.sample.sample.model.sampleModel;
 import com.sample.sample.model.svcModel;
 
@@ -43,31 +43,31 @@ public class sampleService {
         return 1;
     }
 	
-	public List<BowlerModel> getBowler() {
-		List<BowlerModel> list = new ArrayList<>();
-		List<BowlerModel> tmpList = sampleDao.selectBowlerList();
+	public List<bowlerModel> getBowler() {
+		List<bowlerModel> list = new ArrayList<>();
+		List<bowlerModel> tmpList = sampleDao.selectBowlerList();
 		
-		List<Integer> teamIdList = tmpList.stream().map(BowlerModel::getTeamID).distinct().collect(Collectors.toList());
+		List<Integer> teamIdList = tmpList.stream().map(bowlerModel::getTeamID).distinct().collect(Collectors.toList());
 	
 		for(Integer teamId : teamIdList) {
 			
-			BowlerModel bowlerModel = new BowlerModel();
+			bowlerModel bowlerMdl = new bowlerModel();
 
-			List<BowlerModel> resultList = tmpList.stream().filter(
-					BowlerModel -> teamId.equals(BowlerModel.getTeamID()))
+			List<bowlerModel> resultList = tmpList.stream().filter(
+					bowlerModel -> teamId.equals(bowlerModel.getTeamID()))
                     .collect(Collectors.toList());
 
 			
-			bowlerModel.setBowlerLastName((resultList.stream().map(BowlerModel::getBowlerLastName)
+			bowlerMdl.setBowlerLastName((resultList.stream().map(bowlerModel::getBowlerLastName)
                     .collect(Collectors.joining(","))));
 
-			bowlerModel.setBowlerFirstName((resultList.stream().map(BowlerModel::getBowlerFirstName)
+			bowlerMdl.setBowlerFirstName((resultList.stream().map(bowlerModel::getBowlerFirstName)
                     .collect(Collectors.joining(","))));
 			
-			bowlerModel.setBowlerAddress(resultList.stream().map(BowlerModel::getBowlerAddress).
+			bowlerMdl.setBowlerAddress(resultList.stream().map(bowlerModel::getBowlerAddress).
 					collect(Collectors.joining(",")));
 			
-            list.add(bowlerModel);
+            list.add(bowlerMdl);
 	
 		}
 		

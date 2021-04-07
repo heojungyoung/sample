@@ -9,19 +9,25 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.sample.sample.dao.sampleDao;
+import com.sample.sample.dao.SampleDao;
+import com.sample.sample.model.CustomerModel;
 import com.sample.sample.model.bowlerModel;
 import com.sample.sample.model.sampleModel;
 import com.sample.sample.model.svcModel;
 
 @Service
-public class sampleService {
+public class SampleService {
 	
 	@Autowired
-	sampleDao sampleDao;
+	SampleDao sampleDao;
 	
-	public List<sampleModel> getSampleList(String plcyId) {
-	     return sampleDao.selectSampleList(plcyId);
+	public List<CustomerModel> getCustormerList(String custId) {
+	     
+		List<CustomerModel> list = sampleDao.selectCustormerList(custId);
+		
+		list = list.stream().filter(x -> x.getCustState().equals("TX")).collect(Collectors.toList());
+		
+		return list;
 	}
 	
 	public List<svcModel> getSvcList(String mdlYear) {

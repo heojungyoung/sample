@@ -7,15 +7,14 @@ import lombok.Setter;
 @Setter
 public class CustomerModel {
 
-	private String CustomerID;
-	private String CustFirstName;
-	private String CustLastName;
-	private String CustStreetAddress;
-	private String CustCity;
-	private String CustState;
-	private String CustZipCode;
-	private String CustAreaCode;
-	private String CustPhoneNumber;
-	
+	private String customerid;
+	private String custFirstName;
+	private String custLastName;
+	private String custStreetAddress;
+	private String custCity;
+	private String custState;
+	private String custZipCode;
+	private String custAreaCode;
+	private String custPhoneNumber;
 	
 }

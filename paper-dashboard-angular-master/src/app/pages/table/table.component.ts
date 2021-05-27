@@ -15,7 +15,7 @@ export class TableComponent implements OnInit{
     ) {}
 
     SampleList: SampleModel[] = [];
-    SvcList: svcModel[] = [];	
+    SvcList: SampleModel[] = [];	
     mdlYear = '2020';
 
     year : string;
@@ -23,7 +23,7 @@ export class TableComponent implements OnInit{
     appPackage : string;
 
     ngOnInit(){    
-        this.sampleHttpService.getSvcList(this.mdlYear).subscribe( data => {		
+        this.sampleHttpService.getSampleList(this.mdlYear).subscribe( data => {		
             this.SvcList = data.data;
             console.log(this.SvcList);  
         });        

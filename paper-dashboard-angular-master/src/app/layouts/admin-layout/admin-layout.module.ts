@@ -13,6 +13,8 @@ import { IconsComponent }           from '../../pages/icons/icons.component';
 import { MapsComponent }            from '../../pages/maps/maps.component';
 import { NotificationsComponent }   from '../../pages/notifications/notifications.component';
 import { UpgradeComponent }         from '../../pages/upgrade/upgrade.component';
+import { OrderComponent }         from '../../pages/order/order.component';
+
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -32,6 +34,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     IconsComponent,
     MapsComponent,
     NotificationsComponent,
+    OrderComponent
   ]
 })
 

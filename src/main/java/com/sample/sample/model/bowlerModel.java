@@ -5,79 +5,81 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class BowlerModel {
+public class bowlerModel {
 
-	private int BowlerID;
-	private String BowlerLastName;
-	private String BowlerFirstName;
-	private String BowlerMiddleInit;
-	private String BowlerAddress;
-	private String BowlerCity;
-	private String BowlerState;
-	private String BowlerZip;
-	private String BowlerPhoneNumber;
-	private int TeamID;
+	private int bowlerID;
+	private String bowlerLastName;
+	private String bowlerFirstName;
+	private String bowlerMiddleInit;
+	private String bowlerAddress;
+	private String bowlerCity;
+	private String bowlerState;
+	private String bowlerZip;
+	private String bowlerPhoneNumber;
+	private int teamID;
 	
 	public int getBowlerID() {
-		return BowlerID;
+		return bowlerID;
 	}
 	public void setBowlerID(int bowlerID) {
-		BowlerID = bowlerID;
+		this.bowlerID = bowlerID;
 	}
 	public String getBowlerLastName() {
-		return BowlerLastName;
+		return bowlerLastName;
 	}
 	public void setBowlerLastName(String bowlerLastName) {
-		BowlerLastName = bowlerLastName;
+		this.bowlerLastName = bowlerLastName;
 	}
 	public String getBowlerFirstName() {
-		return BowlerFirstName;
+		return bowlerFirstName;
 	}
 	public void setBowlerFirstName(String bowlerFirstName) {
-		BowlerFirstName = bowlerFirstName;
+		this.bowlerFirstName = bowlerFirstName;
 	}
 	public String getBowlerMiddleInit() {
-		return BowlerMiddleInit;
+		return bowlerMiddleInit;
 	}
 	public void setBowlerMiddleInit(String bowlerMiddleInit) {
-		BowlerMiddleInit = bowlerMiddleInit;
+		this.bowlerMiddleInit = bowlerMiddleInit;
 	}
 	public String getBowlerAddress() {
-		return BowlerAddress;
+		return bowlerAddress;
 	}
 	public void setBowlerAddress(String bowlerAddress) {
-		BowlerAddress = bowlerAddress;
+		this.bowlerAddress = bowlerAddress;
 	}
 	public String getBowlerCity() {
-		return BowlerCity;
+		return bowlerCity;
 	}
 	public void setBowlerCity(String bowlerCity) {
-		BowlerCity = bowlerCity;
+		this.bowlerCity = bowlerCity;
 	}
 	public String getBowlerState() {
-		return BowlerState;
+		return bowlerState;
 	}
 	public void setBowlerState(String bowlerState) {
-		BowlerState = bowlerState;
+		this.bowlerState = bowlerState;
 	}
 	public String getBowlerZip() {
-		return BowlerZip;
+		return bowlerZip;
 	}
 	public void setBowlerZip(String bowlerZip) {
-		BowlerZip = bowlerZip;
+		this.bowlerZip = bowlerZip;
 	}
 	public String getBowlerPhoneNumber() {
-		return BowlerPhoneNumber;
+		return bowlerPhoneNumber;
 	}
 	public void setBowlerPhoneNumber(String bowlerPhoneNumber) {
-		BowlerPhoneNumber = bowlerPhoneNumber;
+		this.bowlerPhoneNumber = bowlerPhoneNumber;
 	}
 	public int getTeamID() {
-		return TeamID;
+		return teamID;
 	}
 	public void setTeamID(int teamID) {
-		TeamID = teamID;
+		this.teamID = teamID;
 	}
+	
+	
 	
 	
 	

@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.sample.sample.dao.sampleDao">
+<mapper namespace="com.sample.sample.dao.SampleDao">
                
-	<select id="selectSampleList" parameterType="String" resultType="com.sample.sample.model.sampleModel">
-	    SELECT 
-			ID
-		    ,NAME
-		    ,CNTRCODE
-			,POPULATION
-		FROM CITY
+	<select id="selectCustormerList" parameterType="String" resultType="com.sample.sample.model.CustomerModel">
+		 SELECT  
+		 	CustomerID AS customerid ,
+		 	CustFirstName AS custFirstName ,
+		 	CustLastName AS custLastName,
+		 	CustStreetAddress AS custStreetAddress,
+		 	CustCity AS custCity,
+		 	CustState AS custState,
+		 	CustZipCode AS custZipCode ,
+		 	CustAreaCode AS custAreaCode ,
+		 	CustPhoneNumber AS custPhoneNumber 
+		 FROM SalesOrdersSample.Customers
     </select>
    	
    	<select id="selectSvcList" parameterType="String" resultType="com.sample.sample.model.svcModel">
@@ -79,7 +84,7 @@
   
   
   
-  	<select id="selectBowlerList"  resultType="com.sample.sample.model.BowlerModel" >
+  	<select id="selectBowlerList"  resultType="com.sample.sample.model.bowlerModel" >
   	
   		SELECT 
   		   BowlerID AS bowlerID , 

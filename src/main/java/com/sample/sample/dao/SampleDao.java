@@ -12,7 +12,7 @@ import com.sample.sample.model.svcModel;
 @Repository
 @Mapper
 public interface SampleDao {
-	List<CustomerModel> selectCustormerList(String custId);
+	List<CustomerModel> selectCustomerList();
 	List<svcModel> selectSvcList(String mdlYear);
 	svcModel selectCntr(svcModel svcModel);
 	void insertMdlCntr(svcModel svcModel);

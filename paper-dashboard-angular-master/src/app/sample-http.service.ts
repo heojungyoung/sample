@@ -14,13 +14,12 @@ export class SampleHttpService {
     private _httpClient: HttpClient
   ) {}
 
-  getSampleList(plcyId : string): Observable<SampleModelList> {
+  getSampleList(): Observable<SampleModelList> {
     const href = '/sample/getSampleList';
-    const requestUrl =
-          `${href}?plcyId=${plcyId}`;
+    const requestUrl = `${href}`;
     return this._httpClient.get<SampleModelList>(requestUrl);
   }
-  
+
   getSvcList(mdlYear : string): Observable<svcModelList> {
     const href = '/sample/getSvcList';
     const requestUrl =
@@ -34,7 +33,7 @@ export class SampleHttpService {
           `${href}`;
     return this._httpClient.get<bowlersList>(requestUrl);
   }
-  
+
 
   saveSvc(newData: any): Observable<BaseResponse> {
     const href = '/sample';

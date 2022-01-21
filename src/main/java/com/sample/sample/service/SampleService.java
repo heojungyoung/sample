@@ -12,7 +12,6 @@ import org.springframework.transaction.annotation.Transactional;
 import com.sample.sample.dao.SampleDao;
 import com.sample.sample.model.CustomerModel;
 import com.sample.sample.model.bowlerModel;
-import com.sample.sample.model.sampleModel;
 import com.sample.sample.model.svcModel;
 
 @Service
@@ -21,9 +20,9 @@ public class SampleService {
 	@Autowired
 	SampleDao sampleDao;
 	
-	public List<CustomerModel> getCustormerList(String custId) {
+	public List<CustomerModel> getCustomerList() {
 	     
-		List<CustomerModel> list = sampleDao.selectCustormerList(custId);
+		List<CustomerModel> list = sampleDao.selectCustomerList();
 		
 		list = list.stream().filter(x -> x.getCustState().equals("TX")).collect(Collectors.toList());
 		

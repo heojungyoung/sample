@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.sample.sample.dao.SampleDao">
                
-	<select id="selectCustormerList" parameterType="String" resultType="com.sample.sample.model.CustomerModel">
+	<select id="selectCustomerList" resultType="com.sample.sample.model.CustomerModel">
 		 SELECT  
 		 	CustomerID AS customerid ,
 		 	CustFirstName AS custFirstName ,

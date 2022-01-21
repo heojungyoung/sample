@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="115f0918-8c86-49ce-894b-35d8a656a423" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/paper-dashboard-angular-master/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/paper-dashboard-angular-master/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/paper-dashboard-angular-master/proxy.conf.json" beforeDir="false" afterPath="$PROJECT_DIR$/paper-dashboard-angular-master/proxy.conf.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+    <list default="true" id="115f0918-8c86-49ce-894b-35d8a656a423" name="Changes" comment="빌드 에러 수정">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/paper-dashboard-angular-master/src/app/pages/table/table.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/paper-dashboard-angular-master/src/app/pages/table/table.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/paper-dashboard-angular-master/src/app/sample-http.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/paper-dashboard-angular-master/src/app/sample-http.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sample/sample/controller/SampleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sample/sample/controller/SampleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sample/sample/dao/SampleDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sample/sample/dao/SampleDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sample/sample/service/SampleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sample/sample/service/SampleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/sampleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/sampleMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +70,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -102,8 +107,32 @@
       <option name="presentableId" value="Default" />
       <updated>1641558578991</updated>
       <workItem from="1641558580980" duration="10030000" />
-      <workItem from="1642074770194" duration="2918000" />
+      <workItem from="1642074770194" duration="3560000" />
+      <workItem from="1642732815924" duration="7041000" />
+      <workItem from="1642740287674" duration="3072000" />
     </task>
+    <task id="LOCAL-00001" summary="포트 변경 8081">
+      <created>1642078930879</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1642078930879</updated>
+    </task>
+    <task id="LOCAL-00002" summary="db 접속 비밀번호 변경">
+      <created>1642734329289</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1642734329289</updated>
+    </task>
+    <task id="LOCAL-00003" summary="빌드 에러 수정">
+      <created>1642740484265</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1642740484265</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -132,23 +161,24 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="포트 변경 8081" />
+    <MESSAGE value="db 접속 비밀번호 변경" />
+    <MESSAGE value="빌드 에러 수정" />
+    <option name="LAST_COMMIT_MESSAGE" value="빌드 에러 수정" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/sample/sample/controller/SampleController.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/sample/sample/controller/SampleController.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/sample/sample/config/CorsFilter.java</url>
           <line>26</line>
           <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/sample/sample/service/SampleService.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

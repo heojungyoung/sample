@@ -23,7 +23,7 @@ export class TableComponent implements OnInit{
     appPackage : string;
 
     ngOnInit(){
-        this.sampleHttpService.getSampleList(this.mdlYear).subscribe( data => {
+        this.sampleHttpService.getSampleList().subscribe( data => {
             this.customerList = data.data;
             console.log('test');
             console.log(this.customerList);

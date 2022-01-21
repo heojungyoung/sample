@@ -7,16 +7,21 @@
       <div class="card-body">
         <div class="table-responsive">
           <table class="table">
+
             <thead class=" text-primary">
-              <th>Year</th>
-              <th>serviceName</th>
-              <th>appPackage</th>
+              <th>customerid</th>
+              <th>zipcode</th>
+              <th>phoneNumber</th>
+              <th>city</th>
+              <th>state</th>
             </thead>
             <tbody>
-              <tr *ngFor="let row of SvcList">
-                <td class="ag-c">{{row.sprtYear}}</td>
-                <td class="ag-c">{{row.vaSvcNm}}</td>
-                <td class="ag-c">{{row.appPkgId}}</td>
+              <tr *ngFor="let row of customerList">
+                <td class="ag-c">{{row.customerid}}</td>
+                <td class="ag-c">{{row.custZipCode}}</td>
+                <td class="ag-c">{{row.custPhoneNumber}}</td>
+                <td class="ag-c">{{row.custCity}}</td>
+                <td class="ag-c">{{row.custState}}</td>
               </tr>
             </tbody>
           </table>
@@ -27,7 +32,7 @@
   <div class="col-md-12">
     <div class="card card-plain">
       <div class="card-header">
-        <h4 class="card-title"> service resistration</h4>       
+        <h4 class="card-title"> service resistration</h4>
       </div>
       <div class="card-body">
         <div class="table-responsive">
@@ -40,7 +45,7 @@
               <tr>
                 <th>serviceName</th>
                 <td><input type="text" class="form-control" [(ngModel)]="serviceName"/></td>
-              </tr>               
+              </tr>
               <tr>
                 <th>appPackage</th>
                 <td><input type="text" class="form-control" [(ngModel)]="appPackage"/></td>

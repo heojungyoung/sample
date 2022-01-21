@@ -1,6 +1,11 @@
 import { BaseListData} from './shared/shared.model';
 
 export interface SampleModel {
+  custState: string;
+  custCity: string;
+  custPhoneNumber: string;
+  custZipCode: string;
+  customerid : string;
     id : string,
 	name : string;
 	cntrcode: string;

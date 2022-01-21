@@ -9,34 +9,35 @@ import { SampleModel, svcModel } from '../../sample.model';
 })
 
 export class TableComponent implements OnInit{
-    
+
     constructor(
         private sampleHttpService: SampleHttpService
     ) {}
 
     SampleList: SampleModel[] = [];
-    SvcList: SampleModel[] = [];	
+    customerList: SampleModel[] = [];
     mdlYear = '2020';
 
     year : string;
     serviceName : string;
     appPackage : string;
 
-    ngOnInit(){    
-        this.sampleHttpService.getSampleList(this.mdlYear).subscribe( data => {		
-            this.SvcList = data.data;
-            console.log(this.SvcList);  
-        });        
+    ngOnInit(){
+        this.sampleHttpService.getSampleList(this.mdlYear).subscribe( data => {
+            this.customerList = data.data;
+            console.log('test');
+            console.log(this.customerList);
+        });
     }
 
     onSave() {
-	  
+
         const saveData = {
             year : this.year,
             serviceName: this.serviceName,
             appPackage : this.appPackage
         }
-         
+
         this.sampleHttpService.saveSvc(saveData).subscribe(response => {
             if (response.stat === 'ok') {
                 alert('save');

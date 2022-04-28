@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServletRequest;
 import com.sample.sample.method.Fib;
 import com.sample.sample.model.BaseResponse;
 import com.sample.sample.model.CustomerModel;
+import com.sample.sample.util.example;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -27,6 +28,10 @@ public class SampleController {
 	@GetMapping("/getSampleList")
 	public BaseResponse getCustomerList()  {
 		// fib.allFib(10);
+
+		for(example type : example.values()){
+			System.out.println(type.getValue()); // 에스케이, 엘쥐, 케이티, 삼성, 애플
+		}
 
 		return new BaseResponse(sampleService.getCustomerList());
 	}

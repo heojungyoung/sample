@@ -16,17 +16,15 @@ import com.sample.sample.model.svcModel;
 
 @Service
 public class SampleService {
-	
+
 	@Autowired
 	SampleDao sampleDao;
 	
 	public List<CustomerModel> getCustomerList() {
 	     
 		List<CustomerModel> list = sampleDao.selectCustomerList();
-		
-		list = list.stream().filter(x -> x.getCustState().equals("TX")).collect(Collectors.toList());
-		
-		return list;
+		return list.stream().filter(x -> x.getCustState().equals("TX")).collect(Collectors.toList());
+
 	}
 	
 	public List<svcModel> getSvcList(String mdlYear) {

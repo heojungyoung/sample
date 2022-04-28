@@ -8,15 +8,23 @@
         <div class="table-responsive">
           <table class="table">
             <thead class=" text-primary">
-              <th>Year</th>
-              <th>serviceName</th>
-              <th>appPackage</th>
+              <th>code</th>
+              <th>city</th>
+              <th>firstName</th>
+              <th>lastName</th>
+              <th>phoneNumber</th>
+              <th>state</th>
+              <th>address</th>
             </thead>
             <tbody>
-              <tr *ngFor="let row of SvcList">
-                <td class="ag-c">{{row.sprtYear}}</td>
-                <td class="ag-c">{{row.vaSvcNm}}</td>
-                <td class="ag-c">{{row.appPkgId}}</td>
+              <tr *ngFor="let row of custList">
+                <td class="ag-c">{{row.custAreaCode}}</td>
+                <td class="ag-c">{{row.custCity}}</td>
+                <td class="ag-c">{{row.custFirstName}}</td>
+                <td class="ag-c">{{row.custLastName}}</td>
+                <td class="ag-c">{{row.custPhoneNumber}}</td>
+                <td class="ag-c">{{row.custState}}</td>
+                <td class="ag-c">{{row.custStreetAddress}}</td>
               </tr>
             </tbody>
           </table>

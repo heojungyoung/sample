@@ -4,15 +4,15 @@
                
 	<select id="selectCustormerList" parameterType="String" resultType="com.sample.sample.model.CustomerModel">
 		 SELECT  
-		 	CustomerID AS customerid ,
-		 	CustFirstName AS custFirstName ,
-		 	CustLastName AS custLastName,
-		 	CustStreetAddress AS custStreetAddress,
-		 	CustCity AS custCity,
-		 	CustState AS custState,
-		 	CustZipCode AS custZipCode ,
-		 	CustAreaCode AS custAreaCode ,
-		 	CustPhoneNumber AS custPhoneNumber 
+		 	CustomerID  ,
+		 	CustFirstName  ,
+		 	CustLastName ,
+		 	CustStreetAddress ,
+		 	CustCity ,
+		 	CustState ,
+		 	CustZipCode  ,
+		 	CustAreaCode ,
+		 	CustPhoneNumber
 		 FROM SalesOrdersSample.Customers
     </select>
    	

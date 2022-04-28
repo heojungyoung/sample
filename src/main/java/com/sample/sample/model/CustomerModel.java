@@ -1,10 +1,12 @@
 package com.sample.sample.model;
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
+@Data
 public class CustomerModel {
 
 	private String customerid;

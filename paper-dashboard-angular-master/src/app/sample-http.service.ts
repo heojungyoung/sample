@@ -29,8 +29,7 @@ export class SampleHttpService {
 
   getBowlerList(): Observable<bowlersList> {
     const href = '/sample/getBowlerList';
-    const requestUrl =
-          `${href}`;
+    const requestUrl = `${href}`;
     return this._httpClient.get<bowlersList>(requestUrl);
   }
 

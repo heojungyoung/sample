@@ -1,4 +1,4 @@
-import { Component , OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { SampleHttpService } from '../../sample-http.service';
 import { bowlers } from '../../bowlers.model';
 
@@ -10,6 +10,9 @@ import { bowlers } from '../../bowlers.model';
 
 export class TypographyComponent{
 
+    selectBox = "";
+    female = "";
+    male = "";
 
     constructor(
         private sampleHttpService: SampleHttpService
@@ -17,15 +20,19 @@ export class TypographyComponent{
 
     bowlersList: bowlers[] = [];
 
-    ngOnInit(){    
-        this.sampleHttpService.getBowlerList().subscribe( data => {		
+    ngOnInit(){
+        this.sampleHttpService.getBowlerList().subscribe( data => {
             this.bowlersList = data.data;
-            console.log(this.bowlersList);  
-        });        
+            console.log(this.bowlersList);
+        });
     }
 
 
-    onSave() {
+    onData() {
+
+      alert(this.selectBox);
+      alert(this.female);
+      alert(this.male);
     }
 
 }

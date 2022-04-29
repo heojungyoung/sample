@@ -27,7 +27,7 @@
   <div class="col-md-12">
     <div class="card card-plain">
       <div class="card-header">
-        <h4 class="card-title"> service resistration</h4>       
+        <h4 class="card-title">sample</h4>
       </div>
       <div class="card-body">
         <div class="table-responsive">
@@ -35,22 +35,36 @@
             <tbody>
               <tr>
                 <th>year</th>
-                <td><input type="text" class="form-control"/></td>
+                <td></td>
               </tr>
               <tr>
                 <th>serviceName</th>
-                <td><input type="text" class="form-control"/></td>
-              </tr>               
+                <td>
+                  <input type='checkbox' [(ngModel)]="female" />여성
+                  <input type='checkbox' [(ngModel)]="male"  />남성
+                </td>
+              </tr>
               <tr>
                 <th>appPackage</th>
-                <td><input type="text" class="form-control"/></td>
+                <td><select name="job" [(ngModel)]="selectBox" >
+                  <option value="">직업선택</option>
+                  <option value="학생">학생</option>
+                  <option value="회사원">회사원</option>
+                  <option value="기타">기타</option>
+                </select></td>
               </tr>
             </tbody>
           </table>
 
-          <button (click)="onSave()" >Save</button>
+          <button  (click)="onData()" >data</button>
+
+
         </div>
       </div>
+
+
+
+
     </div>
   </div>
 </div>
